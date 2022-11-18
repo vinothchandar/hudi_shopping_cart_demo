@@ -33,16 +33,35 @@ Source: [Onehouse Blog](https://www.onehouse.ai/blog/apache-hudi-native-aws-inte
 
 # Use-case : Tracking abandoned shopping carts
 
+An online retailer wants to email all users who have abandoned their shopping cart (i.e unpurchased items in the cart),
+based on user activity events.
+
+![](.README_images/62c9e0ee.png)
+
 ## Old school Batch Processing
 
+Batch job that is run every few hours, reprocessing and recomputing the target table every time.
+
+ - Inefficient; too much data read and written. 
+ - Poor data freshness.
+ - Brittle partition based approach for data arrival tracking.
+ - Cannot handle late or out-of-order data.
+
+![](.README_images/476d2fce.png)
 
 ## Incremental Processing with Hudi
 
+Hudi provides powerful primitives to turn this on its head! change capture and record-level updates! 
 
+ - Efficient; only reads/writes new/changed data
+ - Moves data freshness to near real-time
+ - Partitions are now just data organization 
+ - Correctly process even late date and deal with ordering issues.
 
+![](.README_images/cb5bcde9.png)
 
 # Setup
-1. Follow the [Kafka Quickstart](https://kafka.apache.org/quickstart), get it runing locally on port 9092
+1. Follow the [Kafka Quickstart](https://kafka.apache.org/quickstart), get it running locally on port 9092
 2. Install kcat, a command-line utility to publish/consume from kafka topics, using  `brew install kcat`.
 3. Follow the [Spark Quickstart](https://spark.apache.org/docs/latest/quick-start.html) to get Apache Spark installed, with `spark-shell`, `spark-submit` working.
 4. Download or clone this repo and `cd build_on_oss_S1E7`
