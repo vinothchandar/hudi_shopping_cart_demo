@@ -17,8 +17,10 @@
 
 # Build On Open Source - Apache Hudi Demo
 
-![](.README_images/23d5306b.png)
+### Hudi brings transactions, updates, deletes and change capture to data lakes!
+
 ![](.README_images/70237a68.png)
+![](.README_images/23d5306b.png)
 ![](.README_images/3564c4ad.png)
 ![](.README_images/ec53b93c.png)
 ![](.README_images/78471445.png)
@@ -192,7 +194,8 @@ user_cart_status_df.write.format("hudi").
 cat /tmp/hudi-demo/files/sorted_mock_data_batch2.json | kcat -b localhost -t user_events -P
 ```
 
-Watch the Streamer kick into action and perform a second commit and repeat step 4 above with the new commit time. 
+Watch the Streamer kick into action and perform a second commit and repeat step 4 above with the first commit time, 
+to now fetch all data since the first commit.
 
 ```scala
 val beginCommitTime = "<FIRST_COMMIT_TIME>"
