@@ -2,6 +2,7 @@
 /build/
 target/
 .mvn/
+metastore_db/
  
 # OS Files #
 .DS_Store 

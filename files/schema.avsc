@@ -1,0 +1,56 @@
+{
+    "type": "record",
+    "name": "user_events",
+    "fields": [{
+        "name": "action_type",
+        "type": ["null", "string"],
+        "default": null
+    }, {
+        "name": "app_name",
+        "type": ["null", "string"],
+        "default": null
+    }, {
+        "name": "app_version",
+        "type": ["null", "string"],
+        "default": null
+    }, {
+        "name": "cart_empty",
+        "type": "boolean"
+    }, {
+        "name": "event_time_date",
+        "type": "string"
+    }, {
+        "name": "event_time_ts",
+        "type": "string"
+    }, {
+        "name": "id",
+        "type": "int"
+    }, {
+        "name": "last_logged_on",
+        "type": "string"
+    }, {
+        "name": "last_purchase",
+        "type": ["null", "string"],
+        "default": null
+    }, {
+        "name": "lat",
+        "type": ["null", "double"],
+        "default": null
+    }, {
+        "name": "lon",
+        "type": ["null", "double"],
+        "default": null
+    }, {
+        "name": "url",
+        "type": ["null", "string"],
+        "default": null
+    }, {
+        "name": "user_Agent",
+        "type": ["null", "string"],
+        "default": null
+    }, {
+        "name": "user_id",
+        "type": "int"
+    }]
+}
+
