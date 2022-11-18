@@ -1,0 +1,38 @@
+# Directories #
+/build/
+target/
+.mvn/
+ 
+# OS Files #
+.DS_Store 
+*.jar
+*.ear
+*.db
+*.patch 
+
+# Thumbnails
+._*
+ 
+#######################################
+# IntelliJ specific files/directories #
+#######################################
+.out
+.idea/*
+.idea/
+!.idea/vcs.xml
+*.ipr
+*.iws
+*.iml
+*.log
+
+#######################################
+# Maven
+#######################################
+dependency-reduced-pom.xml
+
+
+#######################################
+# Docker
+#######################################
+node_modules
+package-lock.json
